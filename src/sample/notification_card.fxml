@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.NotificationContainer">
+   <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="400.0">
+      <children>
+         <ImageView fx:id="icon" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@icon.png" />
+            </image>
+            <HBox.margin>
+               <Insets left="20.0" right="20.0" />
+            </HBox.margin></ImageView>
+         <VBox prefHeight="200.0" prefWidth="500.0">
+            <children>
+               <VBox alignment="TOP_RIGHT" prefHeight="10.0" prefWidth="10.0">
+                  <children>
+                     <Label fx:id="close" alignment="BASELINE_RIGHT" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#close" text="×" textFill="#000000c2">
+                        <font>
+                           <Font name="Arial Italic" size="20.0" />
+                        </font>
+                        <VBox.margin>
+                           <Insets right="0.0" />
+                        </VBox.margin>
+                     </Label>
+                  </children>
+                  <padding>
+                     <Insets left="20.0" />
+                  </padding>
+               </VBox>
+               <HBox prefHeight="50.0" prefWidth="100.0" spacing="50.0">
+                  <children>
+                     <Label fx:id="title" text="Title">
+                        <font>
+                           <Font size="20.0" />
+                        </font></Label>
+                     <Label fx:id="time" text="Time" textFill="#000000c2">
+                        <font>
+                           <Font size="15.0" />
+                        </font>
+                        <opaqueInsets>
+                           <Insets />
+                        </opaqueInsets>
+                        <HBox.margin>
+                           <Insets top="5.0" />
+                        </HBox.margin></Label>
+                  </children>
+               </HBox>
+               <Label fx:id="details" alignment="CENTER" text="Details" textFill="#000000c2">
+                  <font>
+                     <Font size="15.0" />
+                  </font></Label>
+            </children>
+         </VBox>
+      </children>
+   </HBox>
+
+</AnchorPane>
